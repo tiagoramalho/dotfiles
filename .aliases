@@ -1,0 +1,48 @@
+# ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lr='ls -R'
+alias lf='ls -l | grep "^-"'
+alias l.f='ls -ld .* | grep "^-"'
+alias ld='ls -l | grep "^d"'
+alias l.d='ls -ld .* | grep "^d"'
+alias lgrep='ls -l | grep'
+alias lagrep='ls -lA | grep'
+
+# find aliases
+alias fdir='find . -type d -name'
+alias ff='find . -type f -name'
+
+# safe aliases
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias ln='ln -iv'
+alias mkdir='mkdir -v'
+alias rm='rm -i'
+alias rmf='rm -rf'
+
+# information aliases
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias uptime='uptime -p'
+alias free='free -h'
+alias disk='df'
+
+# one char aliases & typos
+alias v='vim'
+alias c='clear'
+alias g='git'
+alias e='exit'
+alias :q='exit'
+alias quit='exit'
+
+
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# timer
+alias timer='echo "Timer started. Stop with Ctrl-D." && date "+%a, %d %b %H:%M:%S" && time cat && date "+%a, %d %b %H:%M:%S"'
+
