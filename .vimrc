@@ -197,3 +197,7 @@ let g:gitgutter_terminal_reports_focus=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backup          " keep a backup file (restore to previous version)
 set undofile        " keep an undo file (undo changes after closing)
+
+set backupdir=~/.vim/.backup//
+set undodir=~/.vim/.undo//
+
