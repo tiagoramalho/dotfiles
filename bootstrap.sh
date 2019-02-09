@@ -13,6 +13,11 @@ for file in ${files[@]}; do
 	mv -uv ~/$file $old_dir
 done
 
+# Save older i3
+for file in ${files_config[@]}; do 
+	mv -uv ~/.config/$file $old_dir
+done
+
 # Symlink all dotfiles and
 printf "\nSymlink!\n"
 for file in ${files[@]}; do 
