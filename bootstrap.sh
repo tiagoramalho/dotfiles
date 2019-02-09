@@ -3,7 +3,7 @@
 dir=~/dotfiles
 old_dir=~/dotfiles_old
 files=".aliases .bashrc .profile .vimrc .aliases.local .functions .global_gitignore .gitconfig"
-files_config="i3"
+files_config="i3 rofi"
 
 # Create dotfiles_old
 mkdir -p $old_dir
