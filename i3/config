@@ -171,3 +171,6 @@ smart_gaps on
 gaps inner 8
 gaps outer 2
 
+bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+ #increase
+bindsym XF86AudioLowerVolume exec amixer set Master -q 5%- #decrease
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle #mute
