@@ -174,3 +174,11 @@ gaps outer 2
 bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+ #increase
 bindsym XF86AudioLowerVolume exec amixer set Master -q 5%- #decrease
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle #mute
+
+# exec networkManager
+exec --no-startup-id nm-applet
+
+# printscreen 3 modes
+bindsym --release $mod+Shift+Print exec "scrot -s '%Y%m%d_%H%M%S.png' -e 'mv $f /tmp/'"
+bindsym --release Shift+Print exec "scrot -u '%Y%m%d_%H%M%S.png' -e 'mv $f /tmp/'"
+bindsym --release Print exec "scrot '%Y%m%d_%H%M%S.png' -e 'mv $f /tmp/'"
