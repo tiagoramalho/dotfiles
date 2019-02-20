@@ -23,6 +23,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'rhysd/vim-grammarous'
 
 call vundle#end()
 filetype plugin indent on
@@ -201,3 +202,12 @@ set undofile        " keep an undo file (undo changes after closing)
 set backupdir=~/.vim/.backup//
 set undodir=~/.vim/.undo//
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" spell check"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set spelllang=en_us         " spell checking
+autocmd BufRead,BufNewFile *.tex setlocal spell "spell checking files
+
+hi clear SpellBad
+hi SpellBad cterm=underline
