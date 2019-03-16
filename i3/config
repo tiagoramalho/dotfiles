@@ -164,7 +164,8 @@ bar {
 }
 
 # background image
-exec --no-startup-id feh --bg-fill ~/Imagens/Wallpapers/wall2.jpg
+exec --no-startup-id feh --bg-fill ~/dotfiles/i3/wallpaper/wall.jpeg
+exec --no-startup-id "get_wallpaper.sh"
 
 # i3-gaps
 smart_gaps on
