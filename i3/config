@@ -21,7 +21,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -178,6 +178,7 @@ bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle #mute
 
 # exec networkManager
 exec --no-startup-id nm-applet
+exec --no-startup-id setxkbmap pt
 
 # printscreen 3 modes
 bindsym --release $mod+Shift+Print exec "scrot -s '%Y%m%d_%H%M%S.png' -e 'mv $f /tmp/'"
@@ -187,5 +188,6 @@ bindsym --release Print exec "scrot '%Y%m%d_%H%M%S.png' -e 'mv $f /tmp/'"
 # assign apps to workspaces
 assign [class="Slack"] $ws5
 assign [class="Google-chrome"] $ws3
+assign [class="Firefox"] $ws3
 assign [class="Nautilus"] $ws4
 for_window [class="Spotify"] move to workspace $ws10

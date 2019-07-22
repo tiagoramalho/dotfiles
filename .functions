@@ -25,6 +25,10 @@ wordFind(){
     grep -rnw $1 -e $2
 }
 
+wordInDoc(){
+    grep -lri $1 
+}
+
 # Upload a file on terminal (by:Ricardo Jesus)
 uploadFile () {
     curl -H "Max-Days: 1" --upload-file "$1" https://transfer.sh/"`basename "$1"`" && echo
@@ -40,4 +44,21 @@ mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
+# SlackWare Function
 
+# What package does a file belong to?
+slackfile () {
+    ( cd /var/log/packages; grep -l ${1#/} * )
+}
+#rjj-> Is a package installed?
+slackpkg() {
+    if [ "$#" -eq 1 ]; then
+        ls /var/log/packages/ | grep -i "$1"
+    else
+        echo "Please, provide one argument"
+    fi
+}
+
+sbo-query() {  # f(pkg) -> try to look for *pkg*
+    find /home/ramalho/repos/slackbuilds -type d -iname "*$1*"
+}
