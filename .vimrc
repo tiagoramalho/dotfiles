@@ -15,7 +15,7 @@ Plugin 'haya14busa/incsearch-easymotion.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'morhetz/gruvbox'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 "Plugin 'scrooloose/nerdtree'
@@ -24,6 +24,7 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'rhysd/vim-grammarous'
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype plugin indent on
@@ -184,7 +185,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['foo', 'bar'],
-                           \ 'passive_filetypes': ['java'] }
+                           \ 'passive_filetypes': ['java', 'tex'] }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter"
@@ -211,3 +212,12 @@ autocmd BufRead,BufNewFile *.tex setlocal spell "spell checking files
 
 hi clear SpellBad
 hi SpellBad cterm=underline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ale "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+\   'latex': ['chktex', 'lacheck', 'proselint'],
+\   'c': ['clang', 'gcc'],
+\   'cpp': ['clang', 'gcc'],
+\}

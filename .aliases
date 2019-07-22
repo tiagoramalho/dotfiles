@@ -30,7 +30,8 @@ alias free='free -h'
 alias disk='df'
 
 # one char aliases & typos
-alias v='vim'
+alias v='gvim -v'
+alias vim='gvim -v'
 alias c='clear'
 alias g='git'
 alias e='exit'
