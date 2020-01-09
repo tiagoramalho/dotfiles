@@ -221,3 +221,9 @@ let g:ale_linters = {
 \   'c': ['clang', 'gcc'],
 \   'cpp': ['clang', 'gcc'],
 \}
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" remaapping escape
+cnoremap kj <C-C>
+cnoremap jk <C-C>
